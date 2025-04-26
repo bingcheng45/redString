@@ -1,4 +1,7 @@
 import { Metadata } from 'next';
+import Navbar from '@/components/shared/Navbar';
+import HeroSection from '@/components/landing/HeroSection';
+import ValuePropositionSection from '@/components/landing/ValuePropositionSection';
 
 export const metadata: Metadata = {
   title: 'RedString | Connect & Experience',
@@ -8,72 +11,11 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main className="min-h-screen">
-      {/* Hero Section */}
-      <section id="hero" className="container-section relative overflow-hidden bg-gradient-primary dark:bg-gradient-dark">
-        <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
-          <div className="lg:w-1/2 space-y-6">
-            <h1 className="font-heading text-5xl lg:text-6xl font-bold">
-              <span className="text-primary">Connect</span> and{" "}
-              <span className="text-accent">Experience</span>
-            </h1>
-            <p className="text-lg lg:text-xl max-w-lg">
-              RedString brings people together through meaningful connections and unlocks exclusive experiences for you to enjoy together.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button className="btn-primary">
-                Join the Waitlist
-              </button>
-              <button className="btn-secondary">
-                Learn More
-              </button>
-            </div>
-          </div>
-          <div className="lg:w-1/2 relative">
-            {/* Phone mockups will go here */}
-            <div className="p-8 text-center">
-              <p className="text-neutral-dark dark:text-neutral-light font-medium">
-                App mockups coming soon
-              </p>
-            </div>
-          </div>
-        </div>
-        {/* Red string animation will go here */}
-      </section>
-
-      {/* Value Proposition Section */}
-      <section id="benefits" className="container-section bg-neutral-light dark:bg-neutral-dark">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Why Choose RedString?</h2>
-          <p className="max-w-2xl mx-auto text-lg">
-            Our unique approach combines meaningful connections with exclusive experiences
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Value proposition cards will go here */}
-          {[
-            {
-              title: "Quality Matches",
-              description: "Connect with people who share your interests and values"
-            },
-            {
-              title: "Exclusive Deals",
-              description: "Unlock special offers at restaurants, activities, and more"
-            },
-            {
-              title: "Shared Experiences",
-              description: "Create lasting memories with exciting date ideas"
-            },
-          ].map((item, index) => (
-            <div key={index} className="card p-6 hover:shadow-xl transition-shadow">
-              <h3 className="text-xl font-bold mb-4">{item.title}</h3>
-              <p>{item.description}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Deal Partners Showcase */}
+      <Navbar />
+      <HeroSection />
+      <ValuePropositionSection />
+      
+      {/* Deal Partners Showcase - This section will be replaced with a component later */}
       <section id="partners" className="container-section bg-secondary/10 dark:bg-primary/5">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">Exclusive Experiences</h2>
@@ -92,7 +34,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* App Preview Section */}
+      {/* App Preview Section - This section will be replaced with a component later */}
       <section id="app-preview" className="container-section bg-neutral-light dark:bg-neutral-dark">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">How It Works</h2>
@@ -136,7 +78,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Waitlist Signup Component */}
+      {/* Waitlist Signup Component - This section will be replaced with a component later */}
       <section id="waitlist" className="container-section bg-primary text-white">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-4">Join the Waitlist</h2>
@@ -165,7 +107,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
+      {/* Footer - This section will be replaced with a component later */}
       <footer className="bg-neutral-dark text-neutral-light py-12">
         <div className="container-section">
           <div className="grid md:grid-cols-3 gap-8">
