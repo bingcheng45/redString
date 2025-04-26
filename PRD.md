@@ -142,6 +142,114 @@ The landing page should embody a premium, modern aesthetic with sophisticated an
 - Optional subtle sound effects for key interactions (muted by default)
 - Smooth scroll-to-section navigation
 
+## Project Structure
+```
+redString/
+├── app/                               # Next.js App Router
+│   ├── api/                           # API routes
+│   │   └── waitlist/                  # Waitlist signup API
+│   │       └── route.js               # Waitlist API endpoint
+│   ├── layout.js                      # Root layout
+│   ├── page.js                        # Landing page (main page)
+│   └── globals.css                    # Global styles
+├── components/                        # React components
+│   ├── ui/                            # Shadcn UI components
+│   │   ├── button.jsx                 # Button component
+│   │   ├── input.jsx                  # Input component
+│   │   └── ...                        # Other UI components
+│   ├── landing/                       # Landing page specific components
+│   │   ├── HeroSection.jsx            # Hero section
+│   │   ├── ValuePropositionSection.jsx # Value proposition section
+│   │   ├── DealPartnersSection.jsx    # Deal partners showcase
+│   │   ├── AppPreviewSection.jsx      # App preview section
+│   │   ├── WaitlistSection.jsx        # Waitlist signup component
+│   │   └── FooterSection.jsx          # Footer section
+│   ├── animations/                    # Animation components
+│   │   ├── RedString.jsx              # Red string animation component
+│   │   ├── PhoneFloating.jsx          # Floating phone animation
+│   │   ├── ScrollReveal.jsx           # Scroll reveal animation wrapper
+│   │   ├── Parallax.jsx               # Parallax effect component
+│   │   └── Confetti.jsx               # Confetti animation
+│   └── shared/                        # Shared components
+│       ├── Navbar.jsx                 # Navigation bar
+│       ├── ThemeToggle.jsx            # Theme toggle component
+│       └── ProgressBar.jsx            # Progress bar for waitlist
+├── lib/                               # Utility functions and libraries
+│   ├── animations/                    # Animation utilities
+│   │   ├── gsap.js                    # GSAP initialization and utilities
+│   │   ├── lottie.js                  # Lottie animation utilities
+│   │   └── three.js                   # Three.js utilities
+│   ├── hooks/                         # Custom React hooks
+│   │   ├── useScrollAnimation.js      # Hook for scroll animations
+│   │   ├── useParallax.js             # Hook for parallax effects
+│   │   └── useMediaQuery.js           # Hook for responsive design
+│   ├── api.js                         # API utilities
+│   ├── constants.js                   # App constants
+│   └── theme.js                       # Theme configuration
+├── public/                            # Static assets
+│   ├── images/                        # Image assets
+│   │   ├── mockups/                   # App mockup images
+│   │   ├── partners/                  # Partner logos
+│   │   ├── deals/                     # Deal images
+│   │   └── illustrations/             # Illustrations
+│   ├── animations/                    # Lottie animation files
+│   │   ├── redString.json             # Red string Lottie animation
+│   │   └── ...                        # Other Lottie animations
+│   ├── fonts/                         # Custom fonts
+│   └── favicon.ico                    # Favicon
+├── styles/                            # Style-related files
+│   ├── animations.css                 # Animation keyframes and styles
+│   └── variables.css                  # CSS variables
+├── context/                           # React context providers
+│   ├── ThemeContext.jsx               # Theme context provider
+│   └── AnimationContext.jsx           # Animation context provider
+└── config/                            # Configuration files
+    ├── tailwind.config.js             # Tailwind configuration
+    └── animations.config.js           # Animation configuration
+```
+
+## Development Approach
+
+### 1. Setup and Configuration (Week 1)
+- Initialize Next.js project with App Router
+- Configure Tailwind CSS with custom theme based on brand colors
+- Set up Shadcn UI components
+- Install and configure animation libraries (GSAP, Lottie, framer-motion)
+- Create basic layout and page structure
+
+### 2. Component Development (Weeks 2-3)
+- Develop reusable UI components in the ui/ directory
+- Create responsive layouts for each major section
+- Implement static versions of each section without complex animations
+- Build the waitlist form functionality with validation
+
+### 3. Animation Implementation (Weeks 4-5)
+- Create animation utilities and hooks
+- Implement the red string motif animation throughout the site
+- Add scroll-triggered animations for each section
+- Develop interactive micro-animations for buttons and UI elements
+- Implement the phone mockup floating and transition animations
+
+### 4. Integration and Optimization (Week 6)
+- Connect the waitlist form to backend API
+- Implement progressive loading strategies for animations
+- Add responsive behavior for animations on different devices
+- Optimize assets and animation performance
+- Implement analytics tracking
+
+### 5. Testing and Refinement (Week 7)
+- Cross-browser and device testing
+- Performance optimization
+- A/B testing setup for different animation variants
+- Accessibility review and improvements
+
+### 6. Launch Preparation (Week 8)
+- Final polish and bug fixes
+- SEO optimization
+- Social media integration
+- Analytics verification
+- Documentation completion
+
 ## Success Metrics
 - Waitlist conversion rate (target: >30% of visitors)
 - Average time on page (target: >2 minutes)
@@ -156,7 +264,7 @@ The landing page should embody a premium, modern aesthetic with sophisticated an
 
 ## Project Status
 - Current Status: Planning
-- Next Steps: Design wireframes and animation concepts
+- Next Steps: Project setup and component architecture
 
 ---
 
